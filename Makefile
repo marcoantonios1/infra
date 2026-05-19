@@ -1,6 +1,4 @@
-.PHONY: run up down restart logs status pull clean help
-
-run: up ## Alias for up
+.PHONY: up down restart logs status pull clean help
 
 up: ## Start all services in the background
 	docker compose up -d
