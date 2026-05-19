@@ -1,0 +1,16 @@
+# Secrets and local config
+.env
+config.json
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Claude Code session data
+.claude/
