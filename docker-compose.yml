@@ -1,18 +1,15 @@
 services:
-  # Local Whisper transcription — OpenAI-compatible
-  # speaches uses faster-whisper under the hood
   speaches:
     image: ghcr.io/speaches-ai/speaches:latest
     restart: unless-stopped
     environment:
-      ASR_MODEL: ${ASR_MODEL:-large-v3}   # override via .env
+      ASR_MODEL: ${ASR_MODEL:-large-v3}
       ASR_ENGINE: faster_whisper
     ports:
       - "${SPEACHES_PORT:-9000}:9000"
     volumes:
       - speaches_models:/root/.cache
 
-  # Kokoro TTS — local, OpenAI-compatible, free, CPU image
   kokoro:
     image: ghcr.io/remsky/kokoro-fastapi-cpu:latest
     restart: unless-stopped
