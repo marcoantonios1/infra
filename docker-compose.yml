@@ -1,6 +1,6 @@
 services:
   speaches:
-    image: ghcr.io/speaches-ai/speaches:latest
+    image: ghcr.io/speaches-ai/speaches:latest-cpu
     restart: unless-stopped
     environment:
       ASR_MODEL: ${ASR_MODEL:-large-v3}
